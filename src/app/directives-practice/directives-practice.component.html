@@ -1,0 +1,11 @@
+<input type="button" value="Hide / Show" (click)="onClick()">
+<p *ngIf="displayParagraph">Hidden paragraph! Peek a boo!</p>
+<ul>
+  <li
+  *ngFor="let click of clicks; let index = index"
+  [ngStyle]="{backgroundColor: index >= 5 ? 'blue' : 'transparent'}"
+  [ngClass]="index >= 5 ? 'special' : ''"
+  >
+  {{click}}
+</li>
+</ul>

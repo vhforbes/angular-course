@@ -1,0 +1,11 @@
+<div>
+  <input type="text" [(ngModel)]="userName">
+  <br>
+  <p *ngIf="userCreated">{{userName}} was created!</p>
+  <input
+  [disabled]="userName.length < 1"
+  type="button"
+  value="Click"
+  (click)="onClick()"
+  >
+</div>
